@@ -1,10 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-
+import { useEffect } from "react";
 const Container = styled.div`
   background-color: #070707; //#171717
   border: 1px solid white;
   height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,7 +27,6 @@ const AboutMeDescription = styled.div`
   color: #fff;
   position: absolute;
   font-family: "Roboto Condensed", sans-serif;
-  transform: translateY(90%);
   font-size: 2rem;
   line-height: 2rem;
   line-break: strict;
@@ -39,7 +39,7 @@ const AboutMeDescription = styled.div`
   margin-right: 10%;
 `;
 export default function AboutMe() {
-  window.addEventListener("scroll", function (event) {
+  const handleScroll = (event) => {
     // console.log("scrolling");
     let head = document.getElementById("h1");
     let scrollPercent = 0;
@@ -57,7 +57,13 @@ export default function AboutMe() {
       console.log(sp);
     }
     head.style.setProperty("--scrollPercent", scrollPercent + "%");
-  });
+  };
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", function () {});
+    };
+  }, []);
   return (
     <div>
       <Container>

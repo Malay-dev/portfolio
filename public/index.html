@@ -37,6 +37,7 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
+    <script type="text/javascript" src="./tagcanvas.js"></script>
     <title>React App</title>
   </head>
   <body>
@@ -53,4 +54,23 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
+  <script type="text/javascript">
+    window.onload = function () {
+      try {
+        TagCanvas.Start("myCanvas", "tags", {
+          textColour: "#fff",
+          textHeight: 25,
+          outlineColour: "#fff",
+
+          reverse: true,
+          depth: 0.8,
+          maxSpeed: 0.1,
+          shape: "sphere",
+        });
+      } catch (e) {
+        // something went wrong, hide the canvas container
+        document.getElementById("myCanvasContainer").style.display = "none";
+      }
+    };
+  </script>
 </html>

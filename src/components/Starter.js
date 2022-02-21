@@ -37,7 +37,7 @@ const Intro = styled.div`
 `;
 const NameReveal = styled.div`
   font-family: "Comforter", cursive;
-  font-size: 6rem;
+  font-size: 7.5rem;
 `;
 const CurrentStatus = styled.div`
   font-family: "Roboto Condensed", sans-serif;
