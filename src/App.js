@@ -3,6 +3,8 @@ import React from "react";
 // import MediaQuery from 'react-responsive';
 import "./App.css";
 import AboutMe from "./components/AboutMe";
+import ContactMe from "./components/ContactMe";
+import MyProjects from "./components/MyProjects";
 import MySkills from "./components/MySkills";
 import Starter from "./components/Starter";
 function App() {
@@ -15,6 +17,8 @@ function App() {
       <Starter></Starter>
       <AboutMe></AboutMe>
       <MySkills></MySkills>
+      <MyProjects></MyProjects>
+      <ContactMe></ContactMe>
     </div>
   );
 }

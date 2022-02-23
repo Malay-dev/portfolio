@@ -11,47 +11,30 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
 `;
-const AboutMeHead = styled.div`
-  transform: translateX(var(--scrollPercent));
+const ContactsHead = styled.div`
   position: relative;
+  transform: translateX(var(--scrollPercent));
   animation-timing-function: linear;
   transition: transform 1.5s ease-out;
   font-family: "Oswald", sans-serif;
   color: #fff;
   opacity: 30%;
-  /* top: 5%; */
+
   left: -100%;
-  font-size: 20rem;
+  font-size: 15rem;
   z-index: 0;
 `;
-const AboutMeDescription = styled.div`
-  color: #fff;
-  position: absolute;
-  font-family: "Roboto Condensed", sans-serif;
-  font-size: 2rem;
-  line-height: 2rem;
-  line-break: strict;
-  z-index: 2;
-  display: flex;
-  word-wrap: break-word;
-  align-items: center;
-  justify-self: center;
-  margin-left: 10%;
-  margin-right: 10%;
-`;
-export default function AboutMe() {
+export default function ContactMe() {
   const handleScroll = (event) => {
-    let head = document.getElementById("h1");
+    let head = document.getElementById("h4");
     let scrollPercent = 0;
     const { body, documentElement } = event.target;
     const sd = Math.max(body.scrollTop, documentElement.scrollTop);
     const sp =
       (sd / (documentElement.scrollHeight - documentElement.clientHeight)) *
       100;
-    const maxlimit =
-      (documentElement.clientHeight * 150) / documentElement.scrollHeight;
-    if (sp >= 20 && sp <= 35) {
-      scrollPercent = sp * 5;
+    if (sp >= 80) {
+      scrollPercent = sp * 1.4;
       console.log(sp);
     }
     head.style.setProperty("--scrollPercent", scrollPercent + "%");
@@ -65,14 +48,7 @@ export default function AboutMe() {
   return (
     <div>
       <Container>
-        <AboutMeHead id="h1">About Me</AboutMeHead>
-        <AboutMeDescription>
-          <p>
-            Yo! I am Malay Kumar, Btech Student at VIT chennai. A computer
-            science student passionate about programming and UI/UX. Currently
-            trying to become a full stack developer.
-          </p>
-        </AboutMeDescription>
+        <ContactsHead id="h4">Contact Me</ContactsHead>
       </Container>
     </div>
   );

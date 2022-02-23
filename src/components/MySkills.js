@@ -30,15 +30,16 @@ const Container = styled.div`
   justify-content: center;
 `;
 const MySkillsHead = styled.div`
+  position: relative;
   transform: translateX(var(--scrollPercent));
   animation-timing-function: linear;
-  transition: transform 1s ease-out;
+  transition: transform 1.5s ease-out;
   font-family: "Oswald", sans-serif;
   color: #fff;
   opacity: 30%;
-  top: 5%;
-  left: -20%;
-  font-size: 20rem;
+
+  left: -100%;
+  font-size: 15rem;
   z-index: 0;
 `;
 const CloudContainer = styled.div`
@@ -47,23 +48,18 @@ const CloudContainer = styled.div`
 `;
 export default function MySkills() {
   const handleScroll = (event) => {
-    // console.log("scrolling");
     let head = document.getElementById("h2");
     let scrollPercent = 0;
-    // console.log(scrollPercent);
-    //   head.style.transform = translateX({ scrollPercent });
     const { body, documentElement } = event.target;
     const sd = Math.max(body.scrollTop, documentElement.scrollTop);
     const sp =
       (sd / (documentElement.scrollHeight - documentElement.clientHeight)) *
       100;
-    const maxlimit =
-      (documentElement.clientHeight * 150) / documentElement.scrollHeight;
-    if (sp >= 50 && sp <= maxlimit + 150) {
-      scrollPercent = sp - 100;
+    if (sp >= 40 && sp <= 60) {
+      scrollPercent = sp * 3.5;
       console.log(sp);
     }
-    head.style.setProperty("--scrollPercent", scrollPercent * 1.5 + "%");
+    head.style.setProperty("--scrollPercent", scrollPercent + "%");
   };
 
   useEffect(() => {
