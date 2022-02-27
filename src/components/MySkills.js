@@ -23,11 +23,12 @@ const Container = styled.div`
   background-color: #070707; //#171717
   border: 1px solid white;
   height: 100vh;
-  width: 100vw;
+  width: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 `;
 const MySkillsHead = styled.div`
   position: relative;

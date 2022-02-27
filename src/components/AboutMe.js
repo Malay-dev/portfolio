@@ -5,11 +5,12 @@ const Container = styled.div`
   background-color: #070707; //#171717
   border: 1px solid white;
   height: 100vh;
-  width: 100vw;
+  width: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 `;
 const AboutMeHead = styled.div`
   transform: translateX(var(--scrollPercent));
@@ -48,8 +49,6 @@ export default function AboutMe() {
     const sp =
       (sd / (documentElement.scrollHeight - documentElement.clientHeight)) *
       100;
-    const maxlimit =
-      (documentElement.clientHeight * 150) / documentElement.scrollHeight;
     if (sp >= 20 && sp <= 35) {
       scrollPercent = sp * 5;
       console.log(sp);
