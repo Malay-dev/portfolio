@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { useEffect } from "react";
 const Container = styled.div`
   background-color: #070707; //#171717
-  border: 1px solid white;
+  /* border: 1px solid white; */
   height: 100vh;
   width: auto;
   display: flex;
@@ -21,8 +21,8 @@ const AboutMeHead = styled.div`
   color: #fff;
   opacity: 30%;
   /* top: 5%; */
-  left: -100%;
-  font-size: 20rem;
+  left: -95%;
+  font-size: 43vh;
   z-index: 0;
 `;
 const AboutMeDescription = styled.div`
@@ -62,7 +62,7 @@ export default function AboutMe() {
     };
   }, []);
   return (
-    <div>
+    <div id="about-me">
       <Container>
         <AboutMeHead id="h1">About Me</AboutMeHead>
         <AboutMeDescription>

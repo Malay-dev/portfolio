@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { Component } from "react";
 import { useEffect } from "react";
 
 // Slider imported
@@ -13,7 +12,7 @@ const Container = styled.div`
   position: relative;
   background-color: #070707; //#171717
   color: #fff;
-  border: 1px solid white;
+  /* border: 1px solid white; */
   height: 100vh;
   width: auto;
   display: flex;
@@ -40,8 +39,8 @@ const ProjectsHead = styled.div`
   color: #fff;
   opacity: 30%;
   align-self: center;
-  left: -100%;
-  font-size: 18rem;
+  left: -95%;
+  font-size: 38vh;
   z-index: 0;
 `;
 const Cards = styled.div`
@@ -60,6 +59,32 @@ const Cards = styled.div`
   filter: drop-shadow(0 0 0.75rem rgb(222 200 200 / 40%));
   border: 3px solid rgb(222 200 200 / 40%);
 `;
+function NextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block" }}
+      onClick={onClick}>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+        <path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z" />
+      </svg>
+    </div>
+  );
+}
+function PrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block" }}
+      onClick={onClick}>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+        <path d="M224 480c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25l192-192c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l169.4 169.4c12.5 12.5 12.5 32.75 0 45.25C240.4 476.9 232.2 480 224 480z" />
+      </svg>
+    </div>
+  );
+}
 export default function MyProjects() {
   const handleScroll = (event) => {
     let head = document.getElementById("h3");
@@ -93,19 +118,12 @@ export default function MyProjects() {
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
-    nextArrow: (
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-        <path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z" />
-      </svg>
-    ),
-    prevArrow: (
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-        <path d="M224 480c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25l192-192c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l169.4 169.4c12.5 12.5 12.5 32.75 0 45.25C240.4 476.9 232.2 480 224 480z" />
-      </svg>
-    ),
+    arrows: true,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
   };
   return (
-    <div>
+    <div id="my-projects">
       <Container>
         <ProjectsHead id="h3">My Projects</ProjectsHead>
         <SliderContainer>

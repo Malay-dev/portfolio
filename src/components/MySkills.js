@@ -21,7 +21,7 @@ var gLogo = require("./Assets/Logo/git logo.png");
 
 const Container = styled.div`
   background-color: #070707; //#171717
-  border: 1px solid white;
+  /* border: 1px solid white; */
   height: 100vh;
   width: auto;
   display: flex;
@@ -39,14 +39,15 @@ const MySkillsHead = styled.div`
   color: #fff;
   opacity: 30%;
 
-  left: -100%;
-  font-size: 15rem;
+  left: -97.5%;
+  font-size: 33.5vh;
   z-index: 0;
 `;
 const CloudContainer = styled.div`
   position: absolute;
   display: flex;
 `;
+
 export default function MySkills() {
   const handleScroll = (event) => {
     let head = document.getElementById("h2");
@@ -71,7 +72,7 @@ export default function MySkills() {
   }, []);
 
   return (
-    <div>
+    <div id="my-skills">
       <Container>
         <MySkillsHead id="h2">My Skills</MySkillsHead>
         <CloudContainer>
@@ -94,8 +95,7 @@ export default function MySkills() {
                     src={htmlLogo}
                     alt="html"
                     srcSet=""
-                    width={110}
-                    height={100}
+                    style={{ width: "110px", height: "100px" }}
                   />
                 </a>
               </li>
@@ -108,8 +108,7 @@ export default function MySkills() {
                     src={cssLogo}
                     alt="css"
                     srcSet=""
-                    width={80}
-                    height={100}
+                    style={{ width: "80px", height: "100px" }}
                   />
                 </a>
               </li>
@@ -122,8 +121,7 @@ export default function MySkills() {
                     src={jsLogo}
                     alt="javascript"
                     srcSet=""
-                    width={90}
-                    height={100}
+                    style={{ width: "90px", height: "100px" }}
                   />
                 </a>
               </li>
@@ -136,8 +134,7 @@ export default function MySkills() {
                     src={nojsLogo}
                     alt="node js"
                     srcSet=""
-                    width={120}
-                    height={100}
+                    style={{ width: "120px", height: "100px" }}
                   />
                 </a>
               </li>
@@ -150,8 +147,7 @@ export default function MySkills() {
                     src={reLogo}
                     alt="react"
                     srcSet=""
-                    width={100}
-                    height={100}
+                    style={{ width: "100px", height: "100px" }}
                   />
                 </a>
               </li>
@@ -164,8 +160,7 @@ export default function MySkills() {
                     src={bsLogo}
                     alt="bootstrap"
                     srcSet=""
-                    width={120}
-                    height={100}
+                    style={{ width: "120px", height: "100px" }}
                   />
                 </a>
               </li>
@@ -178,8 +173,7 @@ export default function MySkills() {
                     src={djLogo}
                     alt="django"
                     srcSet=""
-                    width={200}
-                    height={100}
+                    style={{ width: "200px", height: "100px" }}
                   />
                 </a>
               </li>
@@ -192,8 +186,7 @@ export default function MySkills() {
                     src={sqlLogo}
                     alt="mySql"
                     srcSet=""
-                    width={120}
-                    height={100}
+                    style={{ width: "120px", height: "100px" }}
                   />
                 </a>
               </li>
@@ -206,8 +199,7 @@ export default function MySkills() {
                     src={flLogo}
                     alt="flask"
                     srcSet=""
-                    width={100}
-                    height={100}
+                    style={{ width: "100px", height: "100px" }}
                   />
                 </a>
               </li>
@@ -220,8 +212,7 @@ export default function MySkills() {
                     src={pyLogo}
                     alt="python"
                     srcSet=""
-                    width={100}
-                    height={100}
+                    style={{ width: "100px", height: "100px" }}
                   />
                 </a>
               </li>
@@ -234,8 +225,7 @@ export default function MySkills() {
                     src={jLogo}
                     alt="java"
                     srcSet=""
-                    width={100}
-                    height={100}
+                    style={{ width: "100px", height: "100px" }}
                   />
                 </a>
               </li>
@@ -244,7 +234,12 @@ export default function MySkills() {
                   href="https://en.wikipedia.org/wiki/Bootstrap_(front-end_framework)"
                   target="_blank"
                   rel="noopener noreferrer">
-                  <img src={cLogo} alt="c" srcSet="" width={100} height={100} />
+                  <img
+                    src={cLogo}
+                    alt="c"
+                    srcSet=""
+                    style={{ width: "100px", height: "100px" }}
+                  />
                 </a>
               </li>
               <li>
@@ -256,8 +251,7 @@ export default function MySkills() {
                     src={cppLogo}
                     alt="c++"
                     srcSet=""
-                    width={90}
-                    height={100}
+                    style={{ width: "90px", height: "100px" }}
                   />
                 </a>
               </li>
@@ -270,8 +264,7 @@ export default function MySkills() {
                     src={fiLogo}
                     alt="figma"
                     srcSet=""
-                    width={70}
-                    height={100}
+                    style={{ width: "70px", height: "100px" }}
                   />
                 </a>
               </li>
@@ -284,8 +277,7 @@ export default function MySkills() {
                     src={xdLogo}
                     alt="adobe xd"
                     srcSet=""
-                    width={100}
-                    height={100}
+                    style={{ width: "100px", height: "100px" }}
                   />
                 </a>
               </li>
@@ -298,8 +290,7 @@ export default function MySkills() {
                     src={gLogo}
                     alt="git"
                     srcSet=""
-                    width={220}
-                    height={100}
+                    style={{ width: "220px", height: "100px" }}
                   />
                 </a>
               </li>
