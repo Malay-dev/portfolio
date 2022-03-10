@@ -7,7 +7,7 @@ import ContactMe from "./components/ContactMe";
 import MyProjects from "./components/MyProjects";
 import MySkills from "./components/MySkills";
 import Starter from "./components/Starter";
-import Footer from "./components/Utility/Footer";
+import Footer from "./components/Footer";
 function App() {
   if ("scrollRestoration" in window.history) {
     window.history.scrollRestoration = "manual";

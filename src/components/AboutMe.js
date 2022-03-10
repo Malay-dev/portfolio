@@ -22,7 +22,7 @@ const AboutMeHead = styled.div`
   opacity: 30%;
   /* top: 5%; */
   left: -95%;
-  font-size: 43vh;
+  font-size: 21vw;
   z-index: 0;
 `;
 const AboutMeDescription = styled.div`

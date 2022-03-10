@@ -22,7 +22,7 @@ const Stage = styled.div`
   text-align: center;
   color: white;
   z-index: 1;
-  border: 1px solid white;
+  /* border: 1px solid white; */
 `;
 const ProfilePhoto = styled.div`
   margin: 2rem;
@@ -39,11 +39,11 @@ const Intro = styled.div`
 `;
 const NameReveal = styled.div`
   font-family: "Comforter", cursive;
-  font-size: 7.5rem;
+  font-size: 8vw;
 `;
 const CurrentStatus = styled.div`
   font-family: "Roboto Condensed", sans-serif;
-  font-size: 2rem;
+  font-size: 2vw;
 `;
 const BtnContainer = styled.div`
   position: absolute;

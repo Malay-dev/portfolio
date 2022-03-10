@@ -32,7 +32,7 @@ const ContactsHead = styled.div`
   opacity: 30%;
   align-self: center;
   left: -100%;
-  font-size: 33.5vh;
+  font-size: 16.5vw;
   z-index: 0;
 `;
 

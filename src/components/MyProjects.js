@@ -40,12 +40,12 @@ const ProjectsHead = styled.div`
   opacity: 30%;
   align-self: center;
   left: -95%;
-  font-size: 38vh;
+  font-size: 19vw;
   z-index: 0;
 `;
 const Cards = styled.div`
-  width: 350px;
-  height: 600px;
+  width: 22vw;
+  height: 79vh;
   border-radius: 20px;
   box-sizing: border-box;
   background: linear-gradient(

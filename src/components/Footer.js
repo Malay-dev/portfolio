@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import ViewsCounter from "./ViewsCounter";
+import ViewsCounter from "./Utility/ViewsCounter";
 
 const Foot = styled.footer`
   position: relative;
@@ -21,6 +21,9 @@ const NavBar = styled.div`
   margin: 2% 20%;
   width: 95vw;
   z-index: 2;
+  @media only screen and (max-width: 800px) {
+    display: none;
+  }
 `;
 const LineBreak = styled.hr`
   display: block;
@@ -38,7 +41,7 @@ const P = styled.p`
 `;
 const Btn = styled.button`
   margin: 0 2%;
-  min-width: 130px;
+  min-width: 8.5vw;
   height: 40px;
   color: #fff;
   padding: 5px 10px;

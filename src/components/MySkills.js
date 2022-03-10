@@ -40,7 +40,7 @@ const MySkillsHead = styled.div`
   opacity: 30%;
 
   left: -97.5%;
-  font-size: 33.5vh;
+  font-size: 17vw;
   z-index: 0;
 `;
 const CloudContainer = styled.div`
@@ -77,7 +77,11 @@ export default function MySkills() {
         <MySkillsHead id="h2">My Skills</MySkillsHead>
         <CloudContainer>
           <div id="myCanvasContainer">
-            <canvas width="900" height="600" id="myCanvas">
+            <canvas
+              width="900"
+              height="600"
+              style={{ width: "100%" }}
+              id="myCanvas">
               <p>
                 Anything in here will be replaced on browsers that support the
                 canvas element
