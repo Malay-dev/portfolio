@@ -1,5 +1,5 @@
 import React from "react";
-import ConfettiBtn from "./Utility/ConfettiBtn";
+import { ConfettiBtn1, ConfettiBtn2 } from "./Utility/ConfettiBtn";
 // import PropTypes from "prop-types";
 
 import styled, { keyframes } from "styled-components";
@@ -117,7 +117,7 @@ export default function Starter() {
         </Stage>
         <BtnContainer>
           <div>
-            <ConfettiBtn></ConfettiBtn>
+            <ConfettiBtn1></ConfettiBtn1>
           </div>
           <MouseScrollContainer>
             <a href="#about-me">
@@ -125,7 +125,9 @@ export default function Starter() {
             </a>
             <p>Scroll down</p>
           </MouseScrollContainer>
-          <div>3</div>
+          <div>
+            <ConfettiBtn2></ConfettiBtn2>
+          </div>
         </BtnContainer>
       </Container>
     </div>

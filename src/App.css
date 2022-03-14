@@ -84,3 +84,41 @@ html {
   transition: 0.2s;
   background-color: #ced4da;
 }
+
+.conf0 {
+  fill: #fc6394;
+}
+.conf1 {
+  fill: #ef3c8a;
+}
+.conf2 {
+  fill: #5adaea;
+}
+.conf3 {
+  fill: #974cbe;
+}
+.conf4 {
+  fill: #3cbecd;
+}
+.conf5 {
+  fill: #813bbe;
+}
+.conf6 {
+  fill: #f9b732;
+}
+.conf7 {
+  display: none;
+  fill: none;
+  stroke: #000000;
+  stroke-miterlimit: 10;
+}
+.conf8 {
+  fill: none;
+  stroke: #f9b732;
+  stroke-width: 9;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+}
+.confetti-cone {
+  transform-origin: 200px 50px;
+}
