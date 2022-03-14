@@ -48,11 +48,10 @@ const ProjectsHead = styled.div`
 `;
 const Cards = styled.div`
   width: 22vw;
-  height: 79vh;
+  height: 78vh;
   padding: 10% 2%;
   display: flex;
   flex-direction: column;
-
   align-items: center;
   border-radius: 20px;
   box-sizing: border-box;
