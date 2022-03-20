@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { useEffect } from "react";
 import { useState } from "react";
-import { db } from "./Utility/firebase";
+import { dbf } from "./Utility/firebase";
 import { collection, addDoc } from "firebase/firestore";
 
 var twitter = require("./Assets/Socials/twitter.png");
@@ -273,9 +273,10 @@ export default function ContactMe() {
   const [loader, setLoader] = useState(false);
 
   const handleSubmit = (e) => {
+    e.preventDefault();
     if ((name !== "", message !== "", email !== "")) {
       setLoader(true);
-      addDoc(collection(db, "contacts"), {
+      addDoc(collection(dbf, "contacts"), {
         name: name,
         email: email,
         message: message,

@@ -2,30 +2,17 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getDatabase } from "firebase/database";
 const firebaseConfig = {
-  apiKey: "AIzaSyCOxFiPOl3Cd_zuyZg3ufpoLvY086_Ikvs",
-  authDomain: "contact-portfolio-d7c90.firebaseapp.com",
-  projectId: "contact-portfolio-d7c90",
-  storageBucket: "contact-portfolio-d7c90.appspot.com",
-  messagingSenderId: "904808251859",
-  appId: "1:904808251859:web:a9dced0feca1c4c7d0ef26",
-  measurementId: "G-8WXQQCC838",
-};
-const firebaseApp = initializeApp(firebaseConfig);
-const db = getFirestore(firebaseApp);
-
-const firebaseConfig1 = {
-  apiKey: "AIzaSyD2h00ky_wQuZsDl0X_Gl8josIXOBYjx_Y",
-  authDomain: "real-time-viewcounter.firebaseapp.com",
+  apiKey: "AIzaSyBkL3IK6-Et7GkzQoeaPQiRG4iSBN8Ump4",
+  authDomain: "my-portfolio-2022-d53c0.firebaseapp.com",
   databaseURL:
-    "https://real-time-viewcounter-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "real-time-viewcounter",
-  storageBucket: "real-time-viewcounter.appspot.com",
-  messagingSenderId: "1031371450918",
-  appId: "1:1031371450918:web:1cc5a67b6ab3affc5254e7",
-  measurementId: "G-RRX5WXBNTM",
+    "https://my-portfolio-2022-d53c0-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "my-portfolio-2022-d53c0",
+  storageBucket: "my-portfolio-2022-d53c0.appspot.com",
+  messagingSenderId: "900012060692",
+  appId: "1:900012060692:web:de9320bc05c7689ff77701",
+  measurementId: "G-3CL722GFSN",
 };
-
-// Initialize Firebase
-const app1 = initializeApp(firebaseConfig1, "app");
-const db_VC = getDatabase(app1);
-export { db, db_VC };
+const app = initializeApp(firebaseConfig);
+const dbf = getFirestore(app);
+const dbr = getDatabase(app);
+export { dbf, dbr };
