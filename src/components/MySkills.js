@@ -131,7 +131,7 @@ export default function MySkills() {
               </li>
               <li>
                 <a
-                  href="https://en.wikipedia.org/wiki/Bootstrap_(front-end_framework)"
+                  href="https://en.wikipedia.org/wiki/Node.js"
                   target="_blank"
                   rel="noopener noreferrer">
                   <img
@@ -144,7 +144,7 @@ export default function MySkills() {
               </li>
               <li>
                 <a
-                  href="https://en.wikipedia.org/wiki/Bootstrap_(front-end_framework)"
+                  href="https://en.wikipedia.org/wiki/React_(JavaScript_library)"
                   target="_blank"
                   rel="noopener noreferrer">
                   <img
@@ -196,7 +196,7 @@ export default function MySkills() {
               </li>
               <li>
                 <a
-                  href="https://en.wikipedia.org/wiki/Django_(web_framework)"
+                  href="https://en.wikipedia.org/wiki/Flask_(web_framework)"
                   target="_blank"
                   rel="noopener noreferrer">
                   <img
@@ -209,7 +209,7 @@ export default function MySkills() {
               </li>
               <li>
                 <a
-                  href="https://en.wikipedia.org/wiki/Bootstrap_(front-end_framework)"
+                  href="https://en.wikipedia.org/wiki/Python_(programming_language)"
                   target="_blank"
                   rel="noopener noreferrer">
                   <img
@@ -222,7 +222,7 @@ export default function MySkills() {
               </li>
               <li>
                 <a
-                  href="https://en.wikipedia.org/wiki/Bootstrap_(front-end_framework)"
+                  href="https://en.wikipedia.org/wiki/Java_(programming_language)"
                   target="_blank"
                   rel="noopener noreferrer">
                   <img
@@ -235,7 +235,7 @@ export default function MySkills() {
               </li>
               <li>
                 <a
-                  href="https://en.wikipedia.org/wiki/Bootstrap_(front-end_framework)"
+                  href="https://en.wikipedia.org/wiki/C_(programming_language)"
                   target="_blank"
                   rel="noopener noreferrer">
                   <img
@@ -274,7 +274,7 @@ export default function MySkills() {
               </li>
               <li>
                 <a
-                  href="https://en.wikipedia.org/wiki/Bootstrap_(front-end_framework)"
+                  href="https://en.wikipedia.org/wiki/Adobe_XD"
                   target="_blank"
                   rel="noopener noreferrer">
                   <img

@@ -10,6 +10,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 //Imgs
 var AnimusicImg = require("./Assets/ProjectImgs/Animusic_logo.png");
+var PortfolioImg = require("./Assets/ProjectImgs/Portfolio_logo.png");
 
 const Container = styled.div`
   position: relative;
@@ -186,14 +187,17 @@ export default function MyProjects() {
             <Slider {...settings}>
               <div>
                 <Cards>
-                  <Img alt="Image" src="" srcSet=""></Img>
+                  <Img alt="Image" src={PortfolioImg} srcSet=""></Img>
                   <Head>Portfolio Website</Head>
                   <Description>
                     This Website that you are currently browsing, this website
                     is developed on React.js framework
                   </Description>
                   <BtnContainer>
-                    <A href="#">
+                    <A
+                      href="https://github.com/Malay-dev/portfolio.git"
+                      target="_blank"
+                      rel="noopener noreferrer">
                       <GithubBtn>
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
