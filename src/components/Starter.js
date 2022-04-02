@@ -111,7 +111,7 @@ export default function Starter() {
           <ProfilePhoto>
             <img
               src={profile}
-              style={{ width: "500px", overflow: "hidden" }}
+              style={{ width: "32.5vw", overflow: "hidden" }}
               alt="Profile"
             />
           </ProfilePhoto>
