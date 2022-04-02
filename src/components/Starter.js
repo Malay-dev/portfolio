@@ -3,6 +3,7 @@ import { ConfettiBtn1, ConfettiBtn2 } from "./Utility/ConfettiBtn";
 // import PropTypes from "prop-types";
 
 import styled, { keyframes } from "styled-components";
+var profile = require("./Assets/Profile/ProfilePicCC-T1.png");
 
 const Container = styled.div`
   background-color: #070707; //#171717
@@ -26,9 +27,9 @@ const Stage = styled.div`
   /* border: 1px solid white; */
 `;
 const ProfilePhoto = styled.div`
-  margin: 2rem;
-  border: 1px solid white;
-  filter: drop-shadow(-0.5rem 0.5rem 0px #b400ff);
+  margin: -5rem;
+  /* border: 1px solid white; */
+  filter: drop-shadow(-0.5rem 0.5rem 5px #b400ff);
 `;
 const Intro = styled.div`
   margin: 2rem;
@@ -108,7 +109,11 @@ export default function Starter() {
         <Stage>
           {/* <h1>hello</h1> */}
           <ProfilePhoto>
-            <img src="" alt="Profile" />
+            <img
+              src={profile}
+              style={{ width: "500px", overflow: "hidden" }}
+              alt="Profile"
+            />
           </ProfilePhoto>
           <Intro>
             <NameReveal>Malay Kumar</NameReveal>
