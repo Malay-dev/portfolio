@@ -27,8 +27,9 @@ const Stage = styled.div`
   /* border: 1px solid white; */
 `;
 const ProfilePhoto = styled.div`
-  margin: -5rem;
+  margin: -5vw;
   /* border: 1px solid white; */
+
   filter: drop-shadow(-0.5rem 0.5rem 5px #b400ff);
 `;
 const Intro = styled.div`
