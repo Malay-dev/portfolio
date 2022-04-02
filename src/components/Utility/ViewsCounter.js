@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import axios from "axios";
 import { dbr } from "./firebase";
-import { onValue, ref, set } from "firebase/database";
+import { onValue, ref, set, update } from "firebase/database";
 import styled from "styled-components";
 const P1 = styled.p`
   font-size: 2rem;
@@ -21,7 +21,7 @@ export default function ViewsCounter() {
     for (var i = 0; i < ip_to_string.length; i++) {
       ip_to_string = ip_to_string.replace(".", "-");
     }
-    set(ref(dbr, "page_views/"), {
+    update(ref(dbr, "page_views/"), {
       viewers_ip: ip_to_string,
     })
       .then(() => {
