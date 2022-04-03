@@ -21,15 +21,17 @@ export default function ViewsCounter() {
     for (var i = 0; i < ip_to_string.length; i++) {
       ip_to_string = ip_to_string.replace(".", "-");
     }
-    update(ref(dbr, "page_views/"), {
-      viewers_ip: ip_to_string,
-    })
-      .then(() => {
-        // Data saved successfully!
+    if (viewers_ip !== "") {
+      set(ref(dbr, "page_views/" + ip_to_string), {
+        viewers_ip: ip_to_string,
       })
-      .catch((error) => {
-        alert(error);
-      });
+        .then(() => {
+          // Data saved successfully!
+        })
+        .catch((error) => {
+          alert(error);
+        });
+    }
     const count_Views = ref(dbr, "page_views/");
 
     onValue(count_Views, (snapshot) => {
