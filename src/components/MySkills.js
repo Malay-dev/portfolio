@@ -59,7 +59,7 @@ export default function MySkills() {
       100;
     if (sp >= 40 && sp <= 60) {
       scrollPercent = sp * 3.5;
-      console.log(sp);
+      // console.log(sp);
     }
     head.style.setProperty("--scrollPercent", scrollPercent + "%");
   };

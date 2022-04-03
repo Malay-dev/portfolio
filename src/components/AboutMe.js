@@ -51,7 +51,7 @@ export default function AboutMe() {
       100;
     if (sp >= 20 && sp <= 35) {
       scrollPercent = sp * 5;
-      console.log(sp);
+      // console.log(sp);
     }
     head.style.setProperty("--scrollPercent", scrollPercent + "%");
   };

@@ -152,7 +152,7 @@ export default function MyProjects() {
       100;
     if (sp >= 60 && sp <= 80) {
       scrollPercent = sp * 1.6;
-      console.log(sp);
+      // console.log(sp);
     }
     head.style.setProperty("--scrollPercent", scrollPercent + "%");
   };

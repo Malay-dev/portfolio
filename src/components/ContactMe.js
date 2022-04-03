@@ -256,7 +256,7 @@ export default function ContactMe() {
       100;
     if (sp >= 80) {
       scrollPercent = sp * 1.4;
-      console.log(sp);
+      // console.log(sp);
     }
     head.style.setProperty("--scrollPercent", scrollPercent + "%");
   };
