@@ -48,7 +48,7 @@ const ProjectsHead = styled.div`
   z-index: 0;
 `;
 const Cards = styled.div`
-  width: 22vw;
+  width: 350px;
   height: 78vh;
   padding: 10% 2%;
   display: flex;
@@ -69,7 +69,7 @@ const Cards = styled.div`
 `;
 const Img = styled.img`
   height: 24vh;
-  width: 12vw;
+  width: 180px;
   border: 1px solid #8c8c8c;
   margin-bottom: 4%;
   border-radius: 8px;
@@ -95,7 +95,7 @@ const GithubBtn = styled.button`
   border: none;
   cursor: pointer;
   height: auto;
-  width: 5vw;
+  width: 75px;
   :hover {
     transform: scale(1.1);
   }
@@ -107,7 +107,7 @@ const LinkBtn = styled.button`
   border: none;
   cursor: pointer;
   height: auto;
-  width: 5vw;
+  width: 75px;
   :hover {
     transform: scale(1.1);
   }
@@ -164,26 +164,43 @@ export default function MyProjects() {
   }, []);
 
   // Settings for carousel
-  var settings = {
-    centerMode: true,
-    className: "center",
+  let settings = {
     autoplay: true,
     autoplaySpeed: 1500,
     pauseOnHover: true,
     dots: true,
     infinite: true,
+    centerMode: true,
     slidesToShow: 3,
     slidesToScroll: 1,
+    className: "center",
     arrows: true,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
+    responsive: [
+      {
+        breakpoint: 1000,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          initialSlide: 1,
+        },
+      },
+      {
+        breakpoint: 950,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
   return (
     <div id="my-projects">
       <Container>
         <ProjectsHead id="h3">My Projects</ProjectsHead>
         <SliderContainer>
-          <div style={{ padding: "0 50% 0 0 !important" }}>
+          <div style={{ width: "100%" }}>
             <Slider {...settings}>
               <div>
                 <Cards>
