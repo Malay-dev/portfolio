@@ -18,6 +18,9 @@ const Container = styled.div`
 const Stage = styled.div`
   display: flex;
   flex-direction: row;
+  @media only screen and (max-width: 600px) {
+    flex-direction: column;
+  }
   align-items: center;
   align-self: center;
   justify-self: space-around;
@@ -32,6 +35,12 @@ const ProfilePhoto = styled.div`
 
   filter: drop-shadow(-0.5rem 0.5rem 5px #b400ff);
 `;
+const ProfileImage = styled.img`
+  width: 500px;
+  @media only screen and (max-width: 600px) {
+    width: 70%;
+  }
+`;
 const Intro = styled.div`
   margin: 2rem;
   color: #fffafa;
@@ -39,14 +48,22 @@ const Intro = styled.div`
   flex-direction: column;
   text-align: left;
   align-items: flex-start;
+  @media only screen and (max-width: 600px) {
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 const NameReveal = styled.div`
   font-family: "Comforter", cursive;
-  font-size: 8vw;
+  font-size: 125px;
+  @media only screen and (max-width: 600px) {
+    font-size: 400%;
+  }
 `;
 const CurrentStatus = styled.div`
   font-family: "Roboto Condensed", sans-serif;
-  font-size: 2vw;
+  font-size: 30px;
 `;
 const BtnContainer = styled.div`
   position: absolute;
@@ -110,9 +127,10 @@ export default function Starter() {
         <Stage>
           {/* <h1>hello</h1> */}
           <ProfilePhoto>
-            <img
+            <ProfileImage
               src={profile}
-              style={{ width: "32.5vw", overflow: "hidden" }}
+              className="profile-photo"
+              style={{}}
               alt="Profile"
             />
           </ProfilePhoto>
