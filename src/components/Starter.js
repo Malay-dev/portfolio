@@ -31,6 +31,9 @@ const Stage = styled.div`
 `;
 const ProfilePhoto = styled.div`
   margin: -5vw;
+  @media only screen and (max-width: 600px) {
+    margin: 0;
+  }
   /* border: 1px solid white; */
 
   filter: drop-shadow(-0.5rem 0.5rem 5px #b400ff);
