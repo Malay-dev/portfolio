@@ -10,17 +10,21 @@ const P1 = styled.p`
 `;
 export default function ViewsCounter() {
   const [ip, setIP] = useState("");
+  const [data, setData] = useState();
 
   //creating function to load ip address from the API
   const getData = async () => {
     const res = await axios.get("https://geolocation-db.com/json/");
-    // console.log(res.data);
+    setData(res.data);
     setIP(res.data.IPv4);
     var viewers_ip = ip;
     var ip_to_string = viewers_ip.toString();
     for (var i = 0; i < ip_to_string.length; i++) {
       ip_to_string = ip_to_string.replace(".", "-");
     }
+    set(ref(dbr, "viewers_data/" + ip_to_string), {
+      data: data,
+    });
     if (viewers_ip !== "") {
       set(ref(dbr, "page_views/" + ip_to_string), {
         viewers_ip: ip_to_string,
