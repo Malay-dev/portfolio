@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import axios from "axios";
 import { dbr } from "./firebase";
@@ -14,7 +14,13 @@ export default function ViewsCounter() {
 
   //creating function to load ip address from the API
   const getData = async () => {
-    const res = await axios.get("https://geolocation-db.com/json/");
+    // const res = await axios.get("https://geolocation-db.com/json/");
+    const res = await axios.get("https://geolocation-db.com/json/", {
+      mode: "cors",
+
+      body: data,
+    });
+    // console.log(res.data);
     setData(res.data);
     setIP(res.data.IPv4);
     var viewers_ip = ip;
@@ -22,9 +28,12 @@ export default function ViewsCounter() {
     for (var i = 0; i < ip_to_string.length; i++) {
       ip_to_string = ip_to_string.replace(".", "-");
     }
-    set(ref(dbr, "viewers_data/" + ip_to_string), {
-      data: data,
-    });
+    if (typeof data !== "undefined") {
+      console.log(data);
+      set(ref(dbr, "viewers_data/" + ip_to_string), {
+        data: data,
+      });
+    }
     if (viewers_ip !== "") {
       set(ref(dbr, "page_views/" + ip_to_string), {
         viewers_ip: ip_to_string,
@@ -42,8 +51,10 @@ export default function ViewsCounter() {
       document.getElementById("view_count_text").innerHTML = snapshot.size;
     });
   };
+  useEffect(() => {
+    getData();
+  }, [ip]);
 
-  getData();
   return (
     <div>
       <P1 id="view_count_text"></P1>
