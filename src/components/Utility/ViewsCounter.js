@@ -14,13 +14,11 @@ export default function ViewsCounter() {
 
   //creating function to load ip address from the API
   const getData = async () => {
-    // const res = await axios.get("https://geolocation-db.com/json/");
     const res = await axios.get("https://geolocation-db.com/json/", {
       mode: "cors",
 
       body: data,
     });
-    // console.log(res.data);
     setData(res.data);
     setIP(res.data.IPv4);
     var viewers_ip = ip;
@@ -29,7 +27,6 @@ export default function ViewsCounter() {
       ip_to_string = ip_to_string.replace(".", "-");
     }
     if (typeof data !== "undefined") {
-      console.log(data);
       set(ref(dbr, "viewers_data/" + ip_to_string), {
         data: data,
       });
